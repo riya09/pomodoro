@@ -42,10 +42,12 @@ function set_mode(setMinute){
 //start and stop button toggle
 document.getElementById('start').addEventListener('click',function(){
     if(!startbtn){
-        if(min>0)stopwatch=setInterval(start_timer,1000);
+        if(min>0){
+		audio.currentTime=0.0;
+		stopwatch=setInterval(start_timer,1000);
+	}
         startbtn=true;
         stopbtn=false;
-        audio.currentTime=0.0;
         document.getElementById('ctrl-image').src='images/stop.png';
     }
     else if(!stopbtn){
