@@ -155,6 +155,7 @@ body{
     }
     #setting-option{
         width: 100%;
+        height: 50%;
         left: 0;
     }
     #description{
