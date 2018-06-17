@@ -12,17 +12,17 @@
             <span id='dot' class="show-time">:</span>
             <span id='sec' class="show-time">00</span>
         </div>
-    
+
         <div class="controls">
             <a href='#' class="cbutton" id="reset" onclick="reset_setting(this)"><img src="images/reset.png"></a>
             <a href="#" class='cbutton' id="start"><img src="images/play.png" id='ctrl-image'></a>
             <a href="#" class='cbutton' id="change-setting"><img src='images/setting.png'></a>
         </div>
-        
+
         <div class='buttons'>
-            <a href="#" class="pbutton" id="focus">FOCUS</a>
-            <a href="#" class="pbutton" id="short">SHORT BREAK</a>
-            <a href="#" class="pbutton" id="long">LONG BREAK</a>
+            <a class="pbutton" id="focus">FOCUS</a>
+            <a class="pbutton" id="short">SHORT BREAK</a>
+            <a class="pbutton" id="long">LONG BREAK</a>
         </div>
         <div id="setting-option">
             <a href="#" id="close"><img src='images/close.png' width="30"></a><br><br>
@@ -47,14 +47,17 @@
                 <li>After four pomodoros, take a longer break (15–30 minutes), reset your checkmark count to zero, then go to step 1.</li>
             </ol>
         </div>
-        
-        <footer>
-            <div id='footer'>
-                <a class="github-button" href="https://github.com/riya09" data-size="large" aria-label="Follow">Follow </a>
-                <!-- Place this tag where you want the button to render. -->
-                <a class="github-button" href="https://github.com/riya09/pomodoro" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork b">Fork</a>
-            </div>
-        </footer>
+        <div class="container">
+          <footer>
+              <div id='footer'>
+                <div class='button-container'>
+                  <a class="github-button" href="https://github.com/riya09" data-size="large" aria-label="Follow">Follow </a>
+                  <!-- Place this tag where you want the button to render. -->
+                  <a class="github-button" href="https://github.com/riya09/pomodoro" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork b">Fork</a>
+                </div>
+              </div>
+          </footer>
+      </div>
         <script src="index.js"></script>
         <!-- Place this tag in your head or just before your close body tag. -->
         <script async defer src="https://buttons.github.io/buttons.js"></script>

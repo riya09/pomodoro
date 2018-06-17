@@ -9,7 +9,7 @@ var minSp=document.getElementById('min'),//get dom of minute text
     //text for notification depending on which mode-focus,short break or long break the user was on
     content=['Take a break,stretch and drink water.','Time to get back to work!',
             'Hope that long break refreshed you up,time to go focus more.'];
-    
+
 function write_txt(get_min,get_sec){
     if(get_sec<10)secSp.innerText='0'+get_sec;
     else secSp.innerText=get_sec;
@@ -93,14 +93,14 @@ Array.from(document.getElementsByClassName('pbutton')).forEach(function(elem,ind
                 }
                 else{
                     mode[i]=false;//sets all other .pbutton class to false
-                    arr[i].style.backgroundColor='#363B42';
+                    arr[i].style.backgroundColor='#1f606e';
                 }
             }
         }
         console.log(mode);
     })
 })
-//on click on setting button, setting div will pop up on top  
+//on click on setting button, setting div will pop up on top
 document.getElementById('change-setting').addEventListener('click',function(){
     document.getElementById('setting-option').style.visibility='visible';
     document.getElementById('setting-option').style.opacity='1';
@@ -113,7 +113,7 @@ document.getElementById('close').addEventListener('click',function(){
 //set details of notification
 function set_notification(){
     if(notify){
-		var n = new Notification('Time Up', { 
+		var n = new Notification('Time Up', {
 			body: tmp
 		});
     }
