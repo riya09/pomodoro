@@ -118,24 +118,6 @@ a{
     background: #3581fa;
     color: white;
 }
-#description{
-    width: 70%;
-    margin: 0 auto;
-    padding: 2%;
-    border-radius: 10px;
-    margin-top: 5%;
-    background: #53607e;
-    color: #e6e8eb;
-    text-align: justify;
-}
-#description p{
-    padding: 2%;
-    line-height: 150%;
-}
-#description ol{
-    padding: 2%;
-    line-height: 200%;
-}
 .container{
   position: relative;
 }
@@ -152,13 +134,62 @@ a{
 .button-container{
   margin-left: 25px;
 }
-@media screen and (max-width:768px){
+.card-container{
+  width:80%;
+  margin:100px auto;
+}
+.card {
+  float: left;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  width: 23%;
+  height:32vh;
+  background: #0f4652;
+  padding:10px;
+  margin-left: 6.66%;
+  border-radius: 5px;
+}
+.card-container::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.card img{
+  display: block;
+  width:25%;
+  margin:0 auto;
+}
+.desc-p {
+  color: #fff;
+  font-size: 16px;
+  font-family: Quicksand,sans-serif;
+  text-align: left;
+  margin-top:15px;
+  line-height: 25px;
+}
+@media screen and (max-width:900px)  {
+  .controls{
+      width:50%;
+  }
+  .card{
+    width:25%;
+    height: auto;
+    margin-left: 2%;
+    margin-top:4%;
+  }
+  .card img{
+    width:30%;
+  }
+}
+@media screen and (max-width:800px){
     .controls{
         width: 50%;
     }
     #setting-option{
         width: 50%;
         left: 20%;
+    }
+    .card{
+      height: auto;
     }
 }
 @media screen and (max-width:414px){
@@ -177,5 +208,15 @@ a{
         margin-top: 30%;
         width: 90%;
         padding:5%;
+    }
+    .card{
+      width:70%;
+      height: auto;
+      display: block;
+      margin-left: 12%;
+      margin-top:4%;
+    }
+    .card img{
+      width:30%;
     }
 }
