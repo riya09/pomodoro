@@ -1,4 +1,4 @@
-var minSp=document.getElementById('min'),//get dom of minute text
+let minSp=document.getElementById('min'),//get dom of minute text
     secSp=document.getElementById('sec'),//get dom of second text
     audio=new Audio('alarm.mp3'),//declare and load audio file
     min=minSp.innerText,//set minute to value of dom
@@ -10,7 +10,7 @@ var minSp=document.getElementById('min'),//get dom of minute text
     content=['Take a break,stretch and drink water.','Time to get back to work!',
             'Hope that long break refreshed you up,time to go focus more.'];
 
-function write_txt(get_min,get_sec){
+let write_txt = (get_min,get_sec) => {
     if(get_sec<10)secSp.innerText='0'+get_sec;
     else secSp.innerText=get_sec;
     if(get_min<10) minSp.innerText='0'+get_min;
@@ -126,4 +126,10 @@ window.addEventListener('load',function(){
         notify=true;
 	   });
     }
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./sw.js')
+             .then(reg => console.log('ServiceWorker Registered'))
+             .catch(err=>console.log(err));
+  }
 })
